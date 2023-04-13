@@ -1,8 +1,35 @@
-<h1>Welcome to SvelteKit</h1>
-<p>
-  Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation
-</p>
-<h1 class="text-3xl font-bold underline">everyone be cool</h1>
+<script>
+  import reference from "$lib/assets/pillbuttonref.png";
+</script>
+
+<button class="pill-button my-button">+ NEW TICKET!</button>
+
+<img src={reference} alt="" />
 
 <style lang="postcss">
+  .btn__pop-up {
+    position: relative;
+    top: 0;
+    transition: transform 0.1s ease-in-out; 
+  }
+  .btn__pop-up:hover {
+    transform: translateY(-3px);
+  }
+  .btn__pop-up:active {
+    transform: translateY(0px);
+  }
+  .btn__cartoon-shadow {
+    box-shadow: 0px 2px 0px #000000;
+    transition: box-shadow 40ms ease-in-out;
+  }
+  .btn__cartoon-shadow:hover {
+    box-shadow: 0px 4px 0px #000000;
+  }
+  .btn__cartoon-shadow:active {
+    box-shadow: 0px 1.5px 0px #000000;
+  }
+
+  .pill-button {
+    @apply btn__pop-up btn__cartoon-shadow rounded-full border border-solid border-black bg-sky-500 p-3 px-5 font-bold text-white hover:bg-sky-700;
+  }
 </style>
