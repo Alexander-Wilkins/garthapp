@@ -1,35 +1,51 @@
-<script>
-  import reference from "$lib/assets/pillbuttonref.png";
+<script lang="ts">
+  import PillButton from "$lib/PillButton.svelte";
 </script>
 
-<button class="pill-button my-button">+ NEW TICKET!</button>
+<div id="new-ticket" class="p-5">
+  <PillButton href="/newticket" label="+ NEW TICKET" />
+</div>
 
-<img src={reference} alt="" />
+<div class=" px-5 flex flex-row items-center justify-between">
+  <div class="font-roboto font-bold text-xl">OPEN TICKET</div>
+  <div class="font-roboto font-thin text-slate-500">
+    Number of Tickets: <strong>43</strong>
+  </div>
+</div>
+
+<table class="table-auto">
+  <thead class="border border-solid hover:bg-red-500">
+    <tr>
+      <th>Select</th>
+      <th>Ticket #</th>
+      <th>Title</th>
+      <th>Assigned To</th>
+      <th>Category</th>
+      <th>Date Created</th>
+      <th>Priority</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>The Sliding Mr. Bones (Next Stop, Pottersville)</td>
+      <td>Malcolm Lockyer</td>
+      <td>1961</td>
+    </tr>
+    <tr>
+      <td>Witchy Woman</td>
+      <td>The Eagles</td>
+      <td>1972</td>
+    </tr>
+    <tr>
+      <td>Shining Star</td>
+      <td>Earth, Wind, and Fire</td>
+      <td>1975</td>
+    </tr>
+  </tbody>
+</table>
 
 <style lang="postcss">
-  .btn__pop-up {
-    position: relative;
-    top: 0;
-    transition: transform 0.1s ease-in-out; 
-  }
-  .btn__pop-up:hover {
-    transform: translateY(-3px);
-  }
-  .btn__pop-up:active {
-    transform: translateY(0px);
-  }
-  .btn__cartoon-shadow {
-    box-shadow: 0px 2px 0px #000000;
-    transition: box-shadow 40ms ease-in-out;
-  }
-  .btn__cartoon-shadow:hover {
-    box-shadow: 0px 4px 0px #000000;
-  }
-  .btn__cartoon-shadow:active {
-    box-shadow: 0px 1.5px 0px #000000;
-  }
-
-  .pill-button {
-    @apply btn__pop-up btn__cartoon-shadow rounded-full border border-solid border-black bg-sky-500 p-3 px-5 font-bold text-white hover:bg-sky-700;
+  .font-roboto {
+    font-family: "Roboto Condensed", sans-serif;
   }
 </style>

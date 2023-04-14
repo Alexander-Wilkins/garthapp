@@ -3,8 +3,8 @@
   import "../app.css";
 </script>
 
-<nav class="flex flex-row px-10 place-content-between items-center py-3">
-  <img src={logo} alt="garthok 2.0 logo" class="h-[90px]" />
+<nav class="flex flex-row px-4 place-content-between items-center py-3">
+  <a href="/"><img src={logo} alt="garthok 2.0 logo" class="h-[90px]" /></a>
   <div class="relative w-1/3">
     <input
       type="search"

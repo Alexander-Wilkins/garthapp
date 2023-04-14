@@ -3,5 +3,7 @@
   import "../app.css";
 </script>
 
-<Navbar />
-<slot />
+<div class="mx-20">
+  <Navbar />
+  <slot />
+</div>
