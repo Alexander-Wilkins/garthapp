@@ -1,10 +1,8 @@
-<script lang="ts">
-  import PillButton from '$lib/PillButton.svelte';
+<script>
+  import Status from './Status.svelte';
 </script>
 
-<div
-  class="floating | grid grid-flow-col auto-cols-max justify-items-center items-center"
->
+<div class="floating | flex flex-row place-content-center">
   <div id="select" class="ticket-cell with-border |">
     <input type="checkbox" class="select-checkbox" />
   </div>
@@ -13,17 +11,12 @@
   </div>
   <div
     id="ticket-title"
-    class="ticket-cell with-border | flex flex-row items-center h-[2.6rem] content-between"
+    class="ticket-cell with-border | flex flex-row items-center h-[2.6rem] content-between hover:bg-orange-100"
   >
-    <a href="/" class="w-[43.125em]">
+    <a href="/reports" class="w-[30em]">
       Research Project - Video Templates for Agents
     </a>
-    <div
-      id="status"
-      class="bg-violet-600 text-slate-50 rounded-full border border-solid border-black py-0 px-6 ml-10"
-    >
-      **New**
-    </div>
+    <Status />
   </div>
   <div id="assigned_to" class="ticket-cell with-border |">
     Assigned to: Alex W.
@@ -48,10 +41,6 @@
 <style lang="postcss">
   :root {
     --checkboxSize: 1.125rem;
-  }
-
-  .font-roboto-condensed {
-    font-family: 'Roboto Condensed', sans-serif;
   }
 
   input.select-checkbox {

@@ -1,11 +1,11 @@
 <script>
-  import logo from "$lib/assets/garthok2-logo.png";
-  import "../app.css";
+  import logo from '$lib/assets/garthok2-logo.png';
+  import '../app.css';
 </script>
 
 <nav class="flex flex-row px-4 place-content-between items-center py-3">
   <a href="/"><img src={logo} alt="garthok 2.0 logo" class="h-[90px]" /></a>
-  <div class="relative w-1/3">
+  <div id="searchbar" class="relative w-1/3">
     <input
       type="search"
       id="default-search"
@@ -18,7 +18,7 @@
       ><i class="fa-solid fa-magnifying-glass" /></button
     >
   </div>
-  <div class="navbutton-wrapper | flex flex-row items-center">
+  <div id="navbuttons" class="navbutton-wrapper | flex flex-row items-center">
     <a href="/" class="flex flex-col items-center hover:text-sky-400 p-2"
       ><i class="fa-solid fa-house-chimney | text-2xl" />Home</a
     >
