@@ -4,7 +4,13 @@
 </script>
 
 <nav class="flex flex-row px-4 place-content-between items-center py-3">
-  <a href="/"><img src={logo} alt="garthok 2.0 logo" class="h-[90px]" /></a>
+  <a href="/"
+    ><img
+      src={logo}
+      alt="garthok 2.0 logo"
+      class="h-[90px] transition-all hover:-rotate-2"
+    /></a
+  >
   <div id="searchbar" class="relative w-1/3">
     <input
       type="search"
@@ -19,10 +25,14 @@
     >
   </div>
   <div id="navbuttons" class="navbutton-wrapper | flex flex-row items-center">
-    <a href="/" class="flex flex-col items-center hover:text-sky-400 p-2"
-      ><i class="fa-solid fa-house-chimney | text-2xl" />Home</a
-    >
-    <a href="/reports" class="flex flex-col items-center hover:text-sky-400 p-2"
+    <a
+      href="/"
+      class=" flex flex-col items-center hover:text-sky-400 p-2 transition-all hover:mb-2"
+      ><i class="fa-solid fa-house-chimney | text-2xl" />Home
+    </a>
+    <a
+      href="/reports"
+      class="flex flex-col items-center hover:text-sky-400 p-2 transition-all hover:mb-2"
       ><i class="fa-solid fa-chart-bar | text-2xl" />Reports</a
     >
   </div>
