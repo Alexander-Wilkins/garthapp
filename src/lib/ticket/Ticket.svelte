@@ -9,15 +9,14 @@
   <div id="ticket_id" class="ticket-cell with-border | text-center">
     <strong>12345</strong>
   </div>
-  <div
+  <a
+    href="/reports"
     id="ticket-title"
-    class="ticket-cell with-border | flex flex-row items-center h-[2.6rem] content-between hover:bg-orange-100"
+    class="ticket-cell with-border | flex flex-row items-center h-[2.6rem] flex-grow hover:bg-orange-100 font-roboto-condensed font-medium hover:font-semibold w-[40rem] justify-between"
   >
-    <a href="/reports" class="w-[30em]">
-      Research Project - Video Templates for Agents
-    </a>
+    Research Project - Video Templates for Agents
     <Status />
-  </div>
+  </a>
   <div id="assigned_to" class="ticket-cell with-border |">
     Assigned to: Alex W.
   </div>
@@ -41,6 +40,9 @@
 <style lang="postcss">
   :root {
     --checkboxSize: 1.125rem;
+  }
+  .font-roboto-condensed {
+    font-family: 'Roboto Condensed', sans-serif;
   }
 
   input.select-checkbox {
