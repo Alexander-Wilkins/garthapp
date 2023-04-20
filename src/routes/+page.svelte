@@ -12,7 +12,7 @@
     Number of Tickets: <strong>43</strong>
   </div>
 </div>
-<section id="tickets" class="shadow-xl bg-slate-50">
+<section id="tickets" class="shadow-xl bg-slate-50 w-[1580px] mx-auto">
   <Ticket />
   <Ticket />
   <Ticket />
