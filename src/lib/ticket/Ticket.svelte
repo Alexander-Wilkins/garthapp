@@ -21,7 +21,7 @@
     </div>
     <div
       id="ticket-title"
-      class="ticket-cell with-border | flex flex-row items-center h-[2.6rem] flex-grow hover:bg-orange-100 font-roboto-condensed font-medium hover:font-semibold w-[40rem] justify-between"
+      class="ticket-cell with-border | flex flex-row items-center h-[2.6rem] flex-grow hover:bg-orange-100 font-roboto-condensed font-medium w-[40rem] justify-between"
     >
       {title}
       <Status statusLabel={status} />

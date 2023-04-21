@@ -1,6 +1,11 @@
 <script lang="ts">
-  export let statusLabel: string = 'new';
   let statusColor = 'text-black';
+
+  export let statusLabel: string = 'new';
+
+  export function capitalizeFirstLetter(str: string): string {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
 </script>
 
 <div
@@ -20,11 +25,9 @@
     : statusColor} rounded-full border border-solid border-black w-[115px] ml-10 text-center"
 >
   {#if statusLabel === 'resolved'}
-    <strong
-      ><i class="fa-solid fa-check" />
-      {statusLabel.toUpperCase()}</strong
-    >
+    <i class="fa-solid fa-check" />
+    {capitalizeFirstLetter(statusLabel)}
   {:else}
-    <strong>{statusLabel.toUpperCase()}</strong>
+    {capitalizeFirstLetter(statusLabel)}
   {/if}
 </div>
