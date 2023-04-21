@@ -1,4 +1,6 @@
 <script>
+  import AssignedUser from './AssignedUser.svelte';
+
   import Status from './Status.svelte';
 </script>
 
@@ -17,9 +19,7 @@
     Research Project - Video Templates for Agents
     <Status />
   </a>
-  <div id="assigned_to" class="ticket-cell with-border |">
-    Assigned to: Alex W.
-  </div>
+  <AssignedUser />
   <div id="category" class="ticket-cell with-border | font-semibold italic">
     AGENT REQUEST
   </div>
