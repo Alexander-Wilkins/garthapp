@@ -15,7 +15,7 @@
   <div id="select" class="ticket-cell with-border">
     <input type="checkbox" class="select-checkbox" />
   </div>
-  <a href="/reports" class="flex-wrapper | w-full">
+  <a href="/ticket/{idNumber}" class="flex-wrapper | w-full">
     <div id="ticket_id" class="ticket-cell with-border | text-center w-[90px]">
       <strong>{idNumber}</strong>
     </div>
@@ -37,6 +37,7 @@
       id="created_at"
       class="ticket-cell with-border | font-semibold italic text-sm h-[2.6rem] justify-center items-center flex flex-row"
     >
+      <span class="text-xs">DATE CREATED: &nbsp;</span>
       {createdAt}
     </div>
     <div id="priority" class="ticket-cell with-border | bg-sky-300">
