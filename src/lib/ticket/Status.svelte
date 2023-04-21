@@ -12,7 +12,7 @@
     : statusLabel === 'replied'
     ? 'text-white bg-blue-500'
     : statusLabel === 'submitted'
-    ? `${statusColor} bg-green-500`
+    ? `text-white bg-green-600`
     : statusLabel === 'waiting'
     ? `${statusColor} bg-yellow-200`
     : statusLabel === 'hold'

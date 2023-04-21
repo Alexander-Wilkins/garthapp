@@ -15,9 +15,10 @@
     Number of Tickets: <strong>{tickets.length}</strong>
   </div>
 </div>
-<section id="tickets" class="shadow-xl bg-slate-50 w-[1580px] mx-auto">
+<section id="tickets" class="shadow-md bg-slate-50 w-[1580px] mx-auto">
   {#each tickets as ticket}
-    <Ticket
+    <Ticket {...ticket} />
+    <!-- <Ticket
       idNumber={ticket.id}
       title={ticket.title}
       assignedTo={ticket.assigned_to}
@@ -25,7 +26,7 @@
       createdAt={ticket.created_at}
       priority={ticket.priority}
       status={ticket.status}
-    />
+    /> -->
   {/each}
 </section>
 

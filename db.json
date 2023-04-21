@@ -52,7 +52,7 @@
       "assigned_to": "kirk",
       "category": "general",
       "created_at": "05-20-23",
-      "priority": "medium"
+      "priority": "critical"
     },
     {
       "id": 64614,
@@ -79,7 +79,7 @@
       "assigned_to": "alex",
       "category": "general",
       "created_at": "05-20-23",
-      "priority": "medium"
+      "priority": "low"
     },
     {
       "id": 92343,
@@ -88,7 +88,7 @@
       "assigned_to": "alex",
       "category": "general",
       "created_at": "05-20-23",
-      "priority": "medium"
+      "priority": "high"
     },
     {
       "id": 73008,

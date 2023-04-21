@@ -1,32 +1,33 @@
 <script lang="ts">
+  import Priority from './Priority.svelte';
   import AssignedUser from './AssignedUser.svelte';
   import Status from './Status.svelte';
 
-  export let idNumber: number;
-  export let title: string;
-  export let status: string;
-  export let assignedTo: string;
-  export let category: string;
-  export let createdAt: string;
-  export let priority: string;
+  export let id: number,
+    title: string,
+    status: string,
+    assigned_to: string,
+    category: string,
+    created_at: string,
+    priority: string;
 </script>
 
 <div class="floating flex-wrapper">
   <div id="select" class="ticket-cell with-border">
     <input type="checkbox" class="select-checkbox" />
   </div>
-  <a href="/ticket/{idNumber}" class="flex-wrapper | w-full">
+  <a href="/ticket/{id}" class="flex-wrapper | w-full">
     <div id="ticket_id" class="ticket-cell with-border | text-center w-[90px]">
-      <strong>{idNumber}</strong>
+      <strong>{id}</strong>
     </div>
     <div
       id="ticket-title"
-      class="ticket-cell with-border | flex flex-row items-center h-[2.6rem] flex-grow hover:bg-orange-100 font-roboto-condensed font-medium w-[40rem] justify-between"
+      class="ticket-cell with-border | flex flex-row items-center h-[2.6rem] flex-grow bg-lime-100 hover:bg-orange-100 font-roboto-condensed font-medium w-[40rem] justify-between"
     >
       {title}
       <Status statusLabel={status} />
     </div>
-    <AssignedUser username={assignedTo} />
+    <AssignedUser username={assigned_to} />
     <div
       id="category"
       class="ticket-cell with-border | font-semibold italic w-[11rem] text-center whitespace-nowrap"
@@ -38,13 +39,13 @@
       class="ticket-cell with-border | font-roboto-condensed font-medium italic text-sm h-[2.6rem] justify-center items-center flex flex-row"
     >
       <span class="text-xs">DATE CREATED: &nbsp;</span>
-      {createdAt}
+      {created_at}
     </div>
-    <div id="priority" class="ticket-cell with-border | bg-sky-300">
-      <span
-        class="font-semibold text-white bg-sky-500 border border-solid border-black rounded-full p-1 px-5"
-        >{priority.toUpperCase()}</span
-      >
+    <div
+      id="priority"
+      class="ticket-cell with-border | bg-slate-200 w-[149px] max-h-[42px] text-center"
+    >
+      <Priority {priority} />
     </div>
   </a>
 </div>
