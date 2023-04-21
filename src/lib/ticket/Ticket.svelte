@@ -11,40 +11,41 @@
   export let priority: string;
 </script>
 
-<div class="floating | flex flex-row place-content-center">
-  <div id="select" class="ticket-cell with-border |">
+<div class="floating flex-wrapper">
+  <div id="select" class="ticket-cell with-border">
     <input type="checkbox" class="select-checkbox" />
   </div>
-  <div id="ticket_id" class="ticket-cell with-border | text-center w-[90px]">
-    <strong>{idNumber}</strong>
-  </div>
-  <a
-    href="/reports"
-    id="ticket-title"
-    class="ticket-cell with-border | flex flex-row items-center h-[2.6rem] flex-grow hover:bg-orange-100 font-roboto-condensed font-medium hover:font-semibold w-[40rem] justify-between"
-  >
-    {title}
-    <Status statusLabel={status} />
-  </a>
-  <AssignedUser username={assignedTo} />
-  <div
-    id="category"
-    class="ticket-cell with-border | font-semibold italic w-[11rem] text-center whitespace-nowrap"
-  >
-    {category.toUpperCase()}
-  </div>
-  <div
-    id="created_at"
-    class="ticket-cell with-border | font-semibold italic text-sm h-[2.6rem] justify-center items-center flex flex-row"
-  >
-    {createdAt}
-  </div>
-  <div id="priority" class="ticket-cell with-border | bg-sky-300">
-    <span
-      class="font-bold text-white bg-sky-500 border border-solid border-black rounded-full p-1 px-5"
-      >{priority.toUpperCase()}</span
+  <a href="/reports" class="flex-wrapper | w-full">
+    <div id="ticket_id" class="ticket-cell with-border | text-center w-[90px]">
+      <strong>{idNumber}</strong>
+    </div>
+    <div
+      id="ticket-title"
+      class="ticket-cell with-border | flex flex-row items-center h-[2.6rem] flex-grow hover:bg-orange-100 font-roboto-condensed font-medium hover:font-semibold w-[40rem] justify-between"
     >
-  </div>
+      {title}
+      <Status statusLabel={status} />
+    </div>
+    <AssignedUser username={assignedTo} />
+    <div
+      id="category"
+      class="ticket-cell with-border | font-semibold italic w-[11rem] text-center whitespace-nowrap"
+    >
+      {category.toUpperCase()}
+    </div>
+    <div
+      id="created_at"
+      class="ticket-cell with-border | font-semibold italic text-sm h-[2.6rem] justify-center items-center flex flex-row"
+    >
+      {createdAt}
+    </div>
+    <div id="priority" class="ticket-cell with-border | bg-sky-300">
+      <span
+        class="font-bold text-white bg-sky-500 border border-solid border-black rounded-full p-1 px-5"
+        >{priority.toUpperCase()}</span
+      >
+    </div>
+  </a>
 </div>
 
 <style lang="postcss">
@@ -68,6 +69,10 @@
 
   .with-border {
     @apply border border-solid border-black;
+  }
+
+  .flex-wrapper {
+    @apply flex flex-row place-content-center;
   }
 
   .floating {

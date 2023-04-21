@@ -12,7 +12,7 @@
 <div class=" flex flex-row items-center justify-between mx-20 my-5">
   <div class="font-roboto-condensed font-bold text-3xl">OPEN TICKETS</div>
   <div class="font-roboto-condensed font-thin text-slate-500 text-xl">
-    Number of Tickets: <strong>43</strong>
+    Number of Tickets: <strong>{tickets.length}</strong>
   </div>
 </div>
 <section id="tickets" class="shadow-xl bg-slate-50 w-[1580px] mx-auto">
