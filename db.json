@@ -1,44 +1,40 @@
 {
   "tickets": [
     {
-      "id": 45678,
+      "id": 45677,
       "title": "Armand Allen MWC Guide 2023",
       "status": "new",
       "assigned_to": "Alex W",
       "category": "general",
       "created_at": "05-20-23",
-      "priority": "medium",
-      "is_selected": true
+      "priority": "medium"
     },
     {
       "id": 26922,
       "title": "John Murray Flyer",
       "status": "new",
-      "assigned_to": "Alex W",
+      "assigned_to": "Joel C.",
       "category": "general",
       "created_at": "05-20-23",
-      "priority": "medium",
-      "is_selected": true
+      "priority": "medium"
     },
     {
       "id": 57722,
       "title": "Two IFP Flyers for Berwick",
       "status": "replied",
-      "assigned_to": "Alex W",
+      "assigned_to": "Randy P.",
       "category": "general",
       "created_at": "05-20-23",
-      "priority": "medium",
-      "is_selected": true
+      "priority": "medium"
     },
     {
       "id": 71951,
       "title": "Blah Blah Emporium 2.0",
       "status": "submitted",
       "assigned_to": "Alex W",
-      "category": "general",
+      "category": "Email Campaign",
       "created_at": "05-20-23",
-      "priority": "medium",
-      "is_selected": true
+      "priority": "medium"
     },
     {
       "id": 99106,
@@ -47,18 +43,16 @@
       "assigned_to": "Alex W",
       "category": "general",
       "created_at": "05-20-23",
-      "priority": "medium",
-      "is_selected": true
+      "priority": "medium"
     },
     {
       "id": 87256,
       "title": "Blah Blah Emporium 2.0",
       "status": "submitted",
-      "assigned_to": "Alex W",
+      "assigned_to": "Kirk V.",
       "category": "general",
       "created_at": "05-20-23",
-      "priority": "medium",
-      "is_selected": true
+      "priority": "medium"
     },
     {
       "id": 64614,
@@ -67,8 +61,7 @@
       "assigned_to": "Alex W",
       "category": "general",
       "created_at": "05-20-23",
-      "priority": "medium",
-      "is_selected": true
+      "priority": "medium"
     },
     {
       "id": 93262,
@@ -77,8 +70,7 @@
       "assigned_to": "Alex W",
       "category": "general",
       "created_at": "05-20-23",
-      "priority": "medium",
-      "is_selected": true
+      "priority": "medium"
     },
     {
       "id": 24844,
@@ -87,8 +79,7 @@
       "assigned_to": "Alex W",
       "category": "general",
       "created_at": "05-20-23",
-      "priority": "medium",
-      "is_selected": true
+      "priority": "medium"
     },
     {
       "id": 92343,
@@ -97,8 +88,7 @@
       "assigned_to": "Alex W",
       "category": "general",
       "created_at": "05-20-23",
-      "priority": "medium",
-      "is_selected": true
+      "priority": "medium"
     },
     {
       "id": 73008,
@@ -107,8 +97,7 @@
       "assigned_to": "Alex W",
       "category": "general",
       "created_at": "05-20-23",
-      "priority": "medium",
-      "is_selected": true
+      "priority": "medium"
     },
     {
       "id": 35981,
@@ -117,8 +106,7 @@
       "assigned_to": "Alex W",
       "category": "general",
       "created_at": "05-20-23",
-      "priority": "medium",
-      "is_selected": true
+      "priority": "medium"
     },
     {
       "id": 70721,
@@ -127,8 +115,7 @@
       "assigned_to": "Alex W",
       "category": "general",
       "created_at": "05-20-23",
-      "priority": "medium",
-      "is_selected": true
+      "priority": "medium"
     },
     {
       "id": 52042,
@@ -137,8 +124,7 @@
       "assigned_to": "Alex W",
       "category": "general",
       "created_at": "05-20-23",
-      "priority": "medium",
-      "is_selected": true
+      "priority": "medium"
     },
     {
       "id": 76804,
@@ -147,8 +133,7 @@
       "assigned_to": "Alex W",
       "category": "general",
       "created_at": "05-20-23",
-      "priority": "medium",
-      "is_selected": true
+      "priority": "medium"
     },
     {
       "id": 78945,
@@ -157,8 +142,7 @@
       "assigned_to": "Alex W",
       "category": "general",
       "created_at": "05-20-23",
-      "priority": "medium",
-      "is_selected": true
+      "priority": "medium"
     }
   ]
 }

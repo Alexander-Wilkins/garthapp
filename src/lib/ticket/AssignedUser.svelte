@@ -8,11 +8,11 @@
 
 <div
   id="assigned_to"
-  class="ticket-cell with-border | flex flex-row place-items-center gap-1"
+  class="ticket-cell with-border | flex flex-row place-items-center gap-1 w-[13.25rem] whitespace-nowrap"
 >
   <span class="text-xs italic">Assigned to:</span>
   <img class="inline-block h-10" src={avatarTemp} alt="avatar" />
-  <span id="user" class="font-semibold">{username}</span>
+  <span id="user" class="font-semibold text-sm">{username}</span>
 </div>
 
 <style lang="postcss">

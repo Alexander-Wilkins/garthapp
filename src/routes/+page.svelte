@@ -1,4 +1,7 @@
 <script lang="ts">
+  export let data;
+  const tickets = data.tickets;
+
   import Ticket from '$lib/ticket/Ticket.svelte';
   import PillButton from '$lib/PillButton.svelte';
 </script>
@@ -13,28 +16,17 @@
   </div>
 </div>
 <section id="tickets" class="shadow-xl bg-slate-50 w-[1580px] mx-auto">
-  <Ticket />
-  <Ticket />
-  <Ticket />
-  <Ticket />
-  <Ticket />
-  <Ticket />
-  <Ticket />
-  <Ticket />
-  <Ticket />
-  <Ticket />
-  <Ticket />
-  <Ticket />
-  <Ticket />
-  <Ticket />
-  <Ticket />
-  <Ticket />
-  <Ticket />
-  <Ticket />
-  <Ticket />
-  <Ticket />
-  <Ticket />
-  <Ticket />
+  {#each tickets as ticket}
+    <Ticket
+      idNumber={ticket.id}
+      title={ticket.title}
+      assignedTo={ticket.assigned_to}
+      category={ticket.category}
+      createdAt={ticket.created_at}
+      priority={ticket.priority}
+      status={ticket.status}
+    />
+  {/each}
 </section>
 
 <footer class="w-full text-center px-auto py-7 text-xs">
