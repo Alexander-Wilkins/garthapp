@@ -4,7 +4,7 @@
       "id": 45677,
       "title": "Armand Allen MWC Guide 2023",
       "status": "new",
-      "assigned_to": "Alex W.",
+      "assigned_to": "alex",
       "category": "general",
       "created_at": "05-20-23",
       "priority": "medium"
@@ -13,7 +13,7 @@
       "id": 26922,
       "title": "John Murray Flyer",
       "status": "new",
-      "assigned_to": "Joel C.",
+      "assigned_to": "joel",
       "category": "general",
       "created_at": "05-20-23",
       "priority": "medium"
@@ -22,7 +22,7 @@
       "id": 57722,
       "title": "Two IFP Flyers for Berwick",
       "status": "replied",
-      "assigned_to": "Randy P.",
+      "assigned_to": "randy",
       "category": "general",
       "created_at": "05-20-23",
       "priority": "medium"
@@ -31,7 +31,7 @@
       "id": 71951,
       "title": "Blah Blah Emporium 2.0",
       "status": "submitted",
-      "assigned_to": "Alex W.",
+      "assigned_to": "alex",
       "category": "Email Campaign",
       "created_at": "05-20-23",
       "priority": "medium"
@@ -40,7 +40,7 @@
       "id": 99106,
       "title": "Blah Blah Emporium 2.0",
       "status": "submitted",
-      "assigned_to": "Alex W.",
+      "assigned_to": "alex",
       "category": "general",
       "created_at": "05-20-23",
       "priority": "medium"
@@ -49,7 +49,7 @@
       "id": 87256,
       "title": "Blah Blah Emporium 2.0",
       "status": "submitted",
-      "assigned_to": "Kirk V.",
+      "assigned_to": "kirk",
       "category": "general",
       "created_at": "05-20-23",
       "priority": "medium"
@@ -58,7 +58,7 @@
       "id": 64614,
       "title": "Blah Blah Emporium 2.0",
       "status": "submitted",
-      "assigned_to": "Alex W.",
+      "assigned_to": "alex",
       "category": "general",
       "created_at": "05-20-23",
       "priority": "medium"
@@ -67,7 +67,7 @@
       "id": 93262,
       "title": "Blah Blah Emporium 2.0",
       "status": "submitted",
-      "assigned_to": "Alex W.",
+      "assigned_to": "alex",
       "category": "general",
       "created_at": "05-20-23",
       "priority": "medium"
@@ -76,7 +76,7 @@
       "id": 24844,
       "title": "Agent Flarp Face",
       "status": "waiting",
-      "assigned_to": "Alex W.",
+      "assigned_to": "alex",
       "category": "general",
       "created_at": "05-20-23",
       "priority": "medium"
@@ -85,7 +85,7 @@
       "id": 92343,
       "title": "This agent is the shit",
       "status": "waiting",
-      "assigned_to": "Alex W.",
+      "assigned_to": "alex",
       "category": "general",
       "created_at": "05-20-23",
       "priority": "medium"
@@ -94,7 +94,7 @@
       "id": 73008,
       "title": "Research Project - Video Templates for Agents",
       "status": "hold",
-      "assigned_to": "Alex W.",
+      "assigned_to": "alex",
       "category": "general",
       "created_at": "05-20-23",
       "priority": "medium"
@@ -103,7 +103,7 @@
       "id": 35981,
       "title": "General Web Changes 2023",
       "status": "hold",
-      "assigned_to": "Alex W.",
+      "assigned_to": "alex",
       "category": "general",
       "created_at": "05-20-23",
       "priority": "medium"
@@ -112,7 +112,7 @@
       "id": 70721,
       "title": "PTC Forms 3.7.23 Update for Humana",
       "status": "hold",
-      "assigned_to": "Alex W.",
+      "assigned_to": "alex",
       "category": "general",
       "created_at": "05-20-23",
       "priority": "medium"
@@ -121,7 +121,7 @@
       "id": 52042,
       "title": "Did you hear the one about a dog?!",
       "status": "hold",
-      "assigned_to": "Alex W.",
+      "assigned_to": "alex",
       "category": "general",
       "created_at": "05-20-23",
       "priority": "medium"
@@ -130,7 +130,7 @@
       "id": 76804,
       "title": "Dog Plem 2.0",
       "status": "resolved",
-      "assigned_to": "Alex W.",
+      "assigned_to": "alex",
       "category": "general",
       "created_at": "05-20-23",
       "priority": "medium"
@@ -139,7 +139,7 @@
       "id": 78945,
       "title": "Dog Plem 3.0",
       "status": "resolved",
-      "assigned_to": "Alex W.",
+      "assigned_to": "alex",
       "category": "general",
       "created_at": "05-20-23",
       "priority": "medium"
@@ -148,7 +148,7 @@
       "id": 45788,
       "title": "Dog Plem 4.0",
       "status": "resolved",
-      "assigned_to": "Randy P.",
+      "assigned_to": "randy",
       "category": "website",
       "created_at": "05-20-23",
       "priority": "medium"
