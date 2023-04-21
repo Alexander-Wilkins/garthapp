@@ -1,11 +1,8 @@
 <script lang="ts">
+  import { capitalizeFirstLetter } from '$lib/utils/capitalize';
   let statusColor = 'text-black';
 
   export let statusLabel: string = 'new';
-
-  export function capitalizeFirstLetter(str: string): string {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-  }
 </script>
 
 <div

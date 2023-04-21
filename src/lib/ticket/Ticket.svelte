@@ -35,14 +35,14 @@
     </div>
     <div
       id="created_at"
-      class="ticket-cell with-border | font-semibold italic text-sm h-[2.6rem] justify-center items-center flex flex-row"
+      class="ticket-cell with-border | font-roboto-condensed font-medium italic text-sm h-[2.6rem] justify-center items-center flex flex-row"
     >
       <span class="text-xs">DATE CREATED: &nbsp;</span>
       {createdAt}
     </div>
     <div id="priority" class="ticket-cell with-border | bg-sky-300">
       <span
-        class="font-bold text-white bg-sky-500 border border-solid border-black rounded-full p-1 px-5"
+        class="font-semibold text-white bg-sky-500 border border-solid border-black rounded-full p-1 px-5"
         >{priority.toUpperCase()}</span
       >
     </div>
