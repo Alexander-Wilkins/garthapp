@@ -1,4 +1,7 @@
 <script lang="ts">
+  export let data;
+  const tickets = data.tickets;
+
   import Ticket from '$lib/ticket/Ticket.svelte';
   import PillButton from '$lib/PillButton.svelte';
 </script>
@@ -9,32 +12,22 @@
 <div class=" flex flex-row items-center justify-between mx-20 my-5">
   <div class="font-roboto-condensed font-bold text-3xl">OPEN TICKETS</div>
   <div class="font-roboto-condensed font-thin text-slate-500 text-xl">
-    Number of Tickets: <strong>43</strong>
+    Number of Tickets: <strong>{tickets.length}</strong>
   </div>
 </div>
-<section id="tickets" class="shadow-xl bg-slate-50 w-[1580px] mx-auto">
-  <Ticket />
-  <Ticket />
-  <Ticket />
-  <Ticket />
-  <Ticket />
-  <Ticket />
-  <Ticket />
-  <Ticket />
-  <Ticket />
-  <Ticket />
-  <Ticket />
-  <Ticket />
-  <Ticket />
-  <Ticket />
-  <Ticket />
-  <Ticket />
-  <Ticket />
-  <Ticket />
-  <Ticket />
-  <Ticket />
-  <Ticket />
-  <Ticket />
+<section id="tickets" class="shadow-md bg-slate-50 w-[1580px] mx-auto">
+  {#each tickets as ticket}
+    <Ticket {...ticket} />
+    <!-- <Ticket
+      idNumber={ticket.id}
+      title={ticket.title}
+      assignedTo={ticket.assigned_to}
+      category={ticket.category}
+      createdAt={ticket.created_at}
+      priority={ticket.priority}
+      status={ticket.status}
+    /> -->
+  {/each}
 </section>
 
 <footer class="w-full text-center px-auto py-7 text-xs">
