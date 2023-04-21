@@ -3,26 +3,26 @@
   import AssignedUser from './AssignedUser.svelte';
   import Status from './Status.svelte';
 
-  export let id: number,
-    title: string,
-    status: string,
-    assigned_to: string,
-    category: string,
-    created_at: string,
-    priority: string;
+  export let id: number;
+  export let title: string;
+  export let status: string;
+  export let assigned_to: string;
+  export let category: string;
+  export let created_at: string;
+  export let priority: string;
 </script>
 
 <div class="floating flex-wrapper">
   <div id="select" class="ticket-cell with-border">
     <input type="checkbox" class="select-checkbox" />
   </div>
-  <a href="/ticket/{id}" class="flex-wrapper | w-full">
-    <div id="ticket_id" class="ticket-cell with-border | text-center w-[90px]">
+  <a href="/ticket/{id}" class="flex-wrapper w-full">
+    <div id="ticket_id" class="ticket-cell with-border text-center w-[90px]">
       <strong>{id}</strong>
     </div>
     <div
       id="ticket-title"
-      class="ticket-cell with-border | flex flex-row items-center h-[2.6rem] flex-grow bg-lime-100 hover:bg-orange-100 font-roboto-condensed font-medium w-[40rem] justify-between"
+      class="ticket-cell with-border flex flex-row items-center h-[2.6rem] flex-grow bg-lime-100 hover:bg-orange-100 font-roboto-condensed font-medium w-[40rem] justify-between"
     >
       {title}
       <Status statusLabel={status} />
@@ -30,20 +30,20 @@
     <AssignedUser username={assigned_to} />
     <div
       id="category"
-      class="ticket-cell with-border | font-semibold italic w-[11rem] text-center whitespace-nowrap"
+      class="ticket-cell with-border font-semibold italic w-[11rem] text-center whitespace-nowrap"
     >
       {category.toUpperCase()}
     </div>
     <div
       id="created_at"
-      class="ticket-cell with-border | font-roboto-condensed font-medium italic text-sm h-[2.6rem] justify-center items-center flex flex-row"
+      class="ticket-cell with-border font-roboto-condensed font-medium italic text-sm h-[2.6rem] justify-center items-center flex flex-row"
     >
       <span class="text-xs">DATE CREATED: &nbsp;</span>
       {created_at}
     </div>
     <div
       id="priority"
-      class="ticket-cell with-border | bg-slate-200 w-[149px] max-h-[42px] text-center"
+      class="ticket-cell with-border bg-slate-200 w-[149px] max-h-[42px] text-center"
     >
       <Priority {priority} />
     </div>
@@ -54,6 +54,7 @@
   :root {
     --checkboxSize: 1.125rem;
   }
+
   .font-roboto-condensed {
     font-family: 'Roboto Condensed', sans-serif;
   }
@@ -80,6 +81,7 @@
   .floating {
     @apply hover:bg-slate-200 hover:shadow-xl hover:transition-shadow;
   }
+
   .floating:hover {
     position: relative;
     bottom: 1px;
