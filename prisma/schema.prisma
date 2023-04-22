@@ -10,10 +10,12 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Post {
+model Ticket {
   id        Int      @id @default(autoincrement())
   title     String
   content   String?
+  html      String?
+  status_id Int      @relation()
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   published Boolean  @default(false)
