@@ -3,13 +3,13 @@
   import AssignedUser from './AssignedUser.svelte';
   import Status from './Status.svelte';
 
-  export let id: number = 12345;
-  export let created_at: string = '05-27-2023';
-  export let title: string = 'missing title';
-  export let status: string = 'new';
-  export let assigned_to: string = 'alex';
-  export let category: string = 'general';
-  export let priority: string = 'medium';
+  export let id: number = 0;
+  export let created_at: string = '';
+  export let title: string = '';
+  export let status: string = '';
+  export let assigned_to: string = '';
+  export let category: string = '';
+  export let priority: string = '';
 </script>
 
 <div class="floating flex-wrapper">
