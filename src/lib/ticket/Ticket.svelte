@@ -4,11 +4,11 @@
   import Status from './Status.svelte';
 
   export let id: number;
+  export let created_at: string;
   export let title: string;
   export let status: string;
   export let assigned_to: string;
   export let category: string;
-  export let created_at: string;
   export let priority: string;
 </script>
 
@@ -32,6 +32,7 @@
       id="category"
       class="ticket-cell with-border font-semibold italic w-[11rem] text-center whitespace-nowrap"
     >
+      <!-- {category.toUpperCase()} -->
       {category.toUpperCase()}
     </div>
     <div
