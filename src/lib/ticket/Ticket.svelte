@@ -3,13 +3,13 @@
   import AssignedUser from './AssignedUser.svelte';
   import Status from './Status.svelte';
 
-  export let id: number;
-  export let title: string;
-  export let status: string;
-  export let assigned_to: string;
-  export let category: string;
-  export let created_at: string;
-  export let priority: string;
+  export let id: number = 12345;
+  export let created_at: string = '05-27-2023';
+  export let title: string = 'missing title';
+  export let status: string = 'new';
+  export let assigned_to: string = 'alex';
+  export let category: string = 'general';
+  export let priority: string = 'medium';
 </script>
 
 <div class="floating flex-wrapper">
@@ -32,6 +32,7 @@
       id="category"
       class="ticket-cell with-border font-semibold italic w-[11rem] text-center whitespace-nowrap"
     >
+      <!-- {category.toUpperCase()} -->
       {category.toUpperCase()}
     </div>
     <div
