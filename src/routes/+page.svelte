@@ -1,11 +1,10 @@
 <script lang="ts">
-  export let data;
-  // const tickets = data.tickets;
-  let { tickets } = data;
-  $: ({ tickets } = data);
-
   import Ticket from '$lib/ticket/Ticket.svelte';
   import PillButton from '$lib/PillButton.svelte';
+
+  export let data;
+  let { tickets } = data;
+  $: ({ tickets } = data);
 </script>
 
 <div id="new-ticket" class="p-5">
@@ -14,7 +13,6 @@
 <div class=" flex flex-row items-center justify-between mx-20 my-5">
   <div class="font-roboto-condensed font-bold text-3xl">OPEN TICKETS</div>
   <div class="font-roboto-condensed font-thin text-slate-500 text-xl">
-    <!-- Number of Countries: <strong>{countries.length}</strong> -->
     &nbsp; Number of Tickets: <strong>{tickets.length}</strong>
   </div>
 </div>

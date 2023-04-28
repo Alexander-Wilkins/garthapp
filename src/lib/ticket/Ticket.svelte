@@ -10,6 +10,14 @@
   export let assigned_to: string;
   export let category: string;
   export let priority: string;
+
+  const formattedDate = new Date(created_at)
+    .toLocaleDateString('en-US', {
+      month: '2-digit',
+      day: '2-digit',
+      year: '2-digit',
+    })
+    .replace(/\//g, '-');
 </script>
 
 <div class="floating flex-wrapper">
@@ -32,7 +40,6 @@
       id="category"
       class="ticket-cell with-border font-semibold italic w-[11rem] text-center whitespace-nowrap"
     >
-      <!-- {category.toUpperCase()} -->
       {category.toUpperCase()}
     </div>
     <div
@@ -40,7 +47,7 @@
       class="ticket-cell with-border font-roboto-condensed font-medium italic text-sm h-[2.6rem] justify-center items-center flex flex-row"
     >
       <span class="text-xs">DATE CREATED: &nbsp;</span>
-      {created_at}
+      {formattedDate}
     </div>
     <div
       id="priority"
