@@ -1,8 +1,10 @@
 <script lang="ts">
+  import type { PageData } from './$types';
+
   import Ticket from '$lib/ticket/Ticket.svelte';
   import PillButton from '$lib/PillButton.svelte';
 
-  export let data;
+  export let data: PageData;
   let { tickets } = data;
   $: ({ tickets } = data);
 </script>
