@@ -1,14 +1,17 @@
 <script lang="ts">
+  import { capitalizeFirstLetter } from '$lib/utils/capitalize';
+
   import Priority from './Priority.svelte';
   import AssignedUser from './AssignedUser.svelte';
-  import Status from './Status.svelte';
+
+  let statusColor = 'text-black';
 
   export let id: number;
-  export let created_at: string;
   export let title: string;
   export let status: string;
   export let assigned_to: string;
   export let category: string;
+  export let created_at: string;
   export let priority: string;
 
   const formattedDate = new Date(created_at)
@@ -33,7 +36,29 @@
       class="ticket-cell with-border flex flex-row items-center h-[2.6rem] flex-grow bg-lime-100 hover:bg-orange-100 font-roboto-condensed font-medium w-[40rem] justify-between"
     >
       {title}
-      <Status statusLabel={status} />
+      <div
+        id="status"
+        class="{status === 'new'
+          ? 'text-white bg-purple-500'
+          : status === 'replied'
+          ? 'text-white bg-blue-500'
+          : status === 'submitted'
+          ? `text-white bg-green-600`
+          : status === 'waiting'
+          ? `${statusColor} bg-yellow-200`
+          : status === 'hold'
+          ? `${statusColor} bg-stone-300`
+          : status === 'resolved'
+          ? `${statusColor} bg-lime-300`
+          : statusColor} rounded-full border border-solid border-black w-[115px] ml-10 text-center"
+      >
+        {#if status === 'resolved'}
+          <i class="fa-solid fa-check" />
+          {capitalizeFirstLetter(status)}
+        {:else}
+          {capitalizeFirstLetter(status)}
+        {/if}
+      </div>
     </div>
     <AssignedUser username={assigned_to} />
     <div

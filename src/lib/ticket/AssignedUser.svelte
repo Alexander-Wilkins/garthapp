@@ -4,7 +4,7 @@
   import randyAvatar from '$lib/assets/randy.png';
   import joelAvatar from '$lib/assets/joel.png';
 
-  export let username: string = 'Alex W.';
+  export let username: string;
 
   const getImagePath = () => {
     return username === 'kirk'
