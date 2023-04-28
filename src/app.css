@@ -28,3 +28,7 @@
 .pill-button {
   @apply btn__pop-up btn__cartoon-shadow rounded-full border border-solid border-black bg-sky-500 p-3 px-5 font-bold text-white hover:bg-sky-700;
 }
+
+.green-edit-button {
+  @apply btn__pop-up btn__cartoon-shadow rounded-full border border-solid border-black bg-lime-600 p-3 px-5 font-bold text-white hover:bg-lime-700;
+}
