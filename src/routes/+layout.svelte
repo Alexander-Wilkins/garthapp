@@ -7,3 +7,9 @@
   <Navbar />
   <slot />
 </div>
+
+<style lang="postcss">
+  :global(.font-roboto-condensed) {
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+</style>

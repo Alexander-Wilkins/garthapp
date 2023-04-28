@@ -88,10 +88,6 @@
     --checkboxSize: 1.125rem;
   }
 
-  .font-roboto-condensed {
-    font-family: 'Roboto Condensed', sans-serif;
-  }
-
   input.select-checkbox {
     position: relative;
     top: 3px;
@@ -103,7 +99,7 @@
     @apply p-2 px-5;
   }
 
-  .with-border {
+  :global(.with-border) {
     @apply border border-solid border-black;
   }
 

@@ -19,7 +19,7 @@
 
 <div
   id="assigned_to"
-  class="ticket-cell with-border | flex flex-row place-items-center gap-1 w-[13.25rem] whitespace-nowrap"
+  class="with-border | flex flex-row place-items-center gap-1 w-[13.25rem] whitespace-nowrap px-5"
 >
   <span class="text-xs italic">Assigned to:</span>
   <img
@@ -39,17 +39,3 @@
     <span id="user" class="font-semibold text-sm">Alex W.</span>
   {/if}
 </div>
-
-<style lang="postcss">
-  :root {
-    --checkboxSize: 1.125rem;
-  }
-
-  .ticket-cell {
-    @apply px-5;
-  }
-
-  .with-border {
-    @apply border border-solid border-black;
-  }
-</style>

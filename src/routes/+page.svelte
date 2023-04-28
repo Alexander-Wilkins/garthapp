@@ -27,9 +27,3 @@
   888-745-2320 Garthok 2 was created by Alex Wilkins and Kirk Vangilder from
   Berwick Insurance Group Marketing - All rights reserved. Nethal the Garthok.
 </footer>
-
-<style lang="postcss">
-  .font-roboto-condensed {
-    font-family: 'Roboto Condensed', sans-serif;
-  }
-</style>
