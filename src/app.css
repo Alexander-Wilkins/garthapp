@@ -4,8 +4,6 @@
 
 /*Button utility Classes*/
 .btn__pop-up {
-  position: relative;
-  top: 0;
   transition: transform 0.1s ease-in-out;
 }
 .btn__pop-up:hover {
@@ -30,7 +28,7 @@
 }
 
 .tan-sm-button {
-  @apply btn__pop-up btn__cartoon-shadow my-2 rounded-full border border-solid border-black bg-amber-100 px-5 py-1 font-bold text-black hover:bg-amber-500;
+  @apply btn__pop-up btn__cartoon-shadow my-2  rounded-full border border-solid border-black bg-amber-100 px-5 py-1 font-bold text-black hover:bg-amber-500;
 }
 
 .green-edit-button {
