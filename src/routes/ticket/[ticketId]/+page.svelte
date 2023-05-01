@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { toast } from '@zerodevx/svelte-toast';
   import { page } from '$app/stores';
   import ArrowButton from '$lib/ArrowButton.svelte';
   import Timer from '$lib/ticket/Timer.svelte';
@@ -11,6 +12,18 @@
     const agentInfo = document.getElementById('agent-info') as HTMLElement;
     const agentInfoText = agentInfo.innerText;
     navigator.clipboard.writeText(agentInfoText);
+    copyToast();
+  }
+
+  function copyToast() {
+    toast.push('Agent Info Copied!', {
+      theme: {
+        '--toastBarHeight': 0,
+        '--toastColor': 'mintcream',
+        '--toastBackground': 'rgba(72,187,120,0.9)',
+        '--toastBarBackground': '#2F855A',
+      },
+    });
   }
 </script>
 
@@ -57,6 +70,7 @@
                 on:click={copyAgentInfo}
                 ><i class="fa-solid fa-copy" /> Copy Info</button
               >
+              <button on:click={copyToast}>SHOW TOAST</button>
             </div>
             <div class="vl" />
             <div id="template-list" class="font-roboto-condensed font-bold">
