@@ -70,7 +70,6 @@
                 on:click={copyAgentInfo}
                 ><i class="fa-solid fa-copy" /> Copy Info</button
               >
-              <button on:click={copyToast}>SHOW TOAST</button>
             </div>
             <div class="vl" />
             <div id="template-list" class="font-roboto-condensed font-bold">
