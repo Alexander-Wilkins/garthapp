@@ -34,6 +34,6 @@
 }
 
 .green-edit-button {
-  @apply btn__pop-up btn__cartoon-shadow rounded-full border border-solid border-black bg-lime-600 p-2 font-bold text-white hover:bg-lime-700;
+  @apply btn__pop-up btn__cartoon-shadow rounded-full border border-solid border-black bg-lime-600 px-4 py-2 font-bold text-white hover:bg-lime-700;
   max-width: 11.25rem;
 }
