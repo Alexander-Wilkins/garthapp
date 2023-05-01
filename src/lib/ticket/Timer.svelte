@@ -4,7 +4,7 @@
   let intervalId: string | number | NodeJS.Timer | undefined;
   let timer = 0;
   let time = '00:00:00';
-  let running = false;
+  let running = true;
 
   function startTimer() {
     intervalId = setInterval(() => {
