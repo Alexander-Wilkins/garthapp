@@ -1,10 +1,7 @@
-<script>
+<script lang="ts">
   import { onMount, onDestroy } from 'svelte';
 
-  /**
-   * @type {string | number | NodeJS.Timer | undefined}
-   */
-  let intervalId;
+  let intervalId: string | number | NodeJS.Timer | undefined;
   let timer = 0;
   let time = '00:00:00';
   let running = false;
@@ -36,11 +33,18 @@
 </script>
 
 <div class="timer-container">
-  <input type="text" value={time} readonly />
-  <button on:click={toggleTimer} />
+  <input
+    type="text"
+    value={time}
+    readonly
+    class="text-center border border-black bg-slate-200 w-28 font-bold h-9"
+  />
+  <button on:click={toggleTimer} class="bg-red-500 rounded-full p-1">
+    {running ? 'Pause' : 'Play'}
+  </button>
 </div>
 
-<style>
+<style lang="postcss">
   .timer-container {
     display: flex;
     align-items: center;

@@ -6,6 +6,12 @@
 
   export let data: { title: string };
   const ticketId = $page.params.ticketId;
+
+  function copyAgentInfo() {
+    const agentInfo = document.getElementById('agent-info') as HTMLElement;
+    const agentInfoText = agentInfo.innerText;
+    navigator.clipboard.writeText(agentInfoText);
+  }
 </script>
 
 <section
@@ -25,26 +31,32 @@
     <div id="left-info-request-replies" class="container">
       <section
         id="top-agent-section"
-        class="container bg-white p-5 rounded-lg border border-black"
+        class="container bg-stone-100 p-5 rounded-lg border border-black"
       >
         <div id="agent-container" class="container flex flex-col">
           <button class="green-edit-button text-sm"
             ><i class="fa-solid fa-pen" /> EDIT AGENT INFO</button
           >
           <div id="agent-content" class="flex flex-row gap-4 mt-3">
-            <div id="info" class="font-roboto-condensed font-bold">
+            <div id="agent-block" class="font-roboto-condensed font-bold">
               <div class="mb-2">AGENT INFORMATION:</div>
 
-              <div class="leading-5">
+              <div id="agent-info" class="leading-5">
                 <span class="text-sky-400 text-lg">Tommy Tinajero</span>
                 <br />Licensed Insurance Agent<br />
                 646-283-5839<br />
                 TommyTJ24@insurance.com <br />License #: 0L93387 <br />
-                <div class="font-light italic">
+                <span class="font-light italic">
                   123 W. Jefferson Rd.<br />
                   El Paso, TX 78945
-                </div>
+                </span>
               </div>
+              <button
+                id="copy-button"
+                class="tan-sm-button text-sm"
+                on:click={copyAgentInfo}
+                ><i class="fa-solid fa-copy" /> Copy Info</button
+              >
             </div>
             <div class="vl" />
             <div id="template-list" class="font-roboto-condensed font-bold">
@@ -55,7 +67,10 @@
               FILE ATTACHMENTS:
             </div>
           </div>
-          <div id="agent-content" class="">
+          <div
+            id="agent-content"
+            class="flex flex-row gap-3 mt-3 bg-white items-center italic text-sm border border-slate-200 px-2 py-1 w-full justify-center"
+          >
             Time Worked:
             <Timer />
           </div>
