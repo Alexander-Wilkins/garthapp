@@ -5,7 +5,6 @@
 
   const agentId = $page.params.agentId;
 
-  console.log(agentId);
 </script>
 
 <ArrowButton href="/ticket/{agentId}" />

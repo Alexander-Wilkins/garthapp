@@ -5,11 +5,13 @@
   let timer = 0;
   let time = '00:00:00';
   let running = true;
+  let playIcon = `<i class="fa-solid fa-play"></i>`;
+  let pauseIcon = `<i class="fa-solid fa-pause"></i>`;
 
   function startTimer() {
     intervalId = setInterval(() => {
       timer++;
-      time = new Date(timer * 1000).toISOString().substr(11, 8);
+      time = new Date(timer * 1000).toISOString().slice(11, 19);
     }, 1000);
   }
 
@@ -21,6 +23,7 @@
   function toggleTimer() {
     running = !running;
     running ? startTimer() : stopTimer();
+    console.log(`Current time worked: ${time}`);
   }
 
   onMount(() => {
@@ -37,10 +40,12 @@
     type="text"
     value={time}
     readonly
-    class="text-center border border-black bg-slate-200 w-28 font-bold h-9"
+    class="text-center border border-black w-28 font-bold h-9 {running
+      ? 'bg-slate-20'
+      : 'bg-red-200 text-red-800'}"
   />
-  <button on:click={toggleTimer} class="bg-red-500 rounded-full p-1">
-    {running ? 'Pause' : 'Play'}
+  <button on:click={toggleTimer} class="pauseplay-button">
+    <span class="">{@html running ? pauseIcon : playIcon}</span>
   </button>
 </div>
 
@@ -52,5 +57,9 @@
 
   .timer-container input {
     margin-right: 10px;
+  }
+
+  .pauseplay-button {
+    @apply h-[30px] w-[30px] rounded-full border border-black bg-white hover:bg-slate-300;
   }
 </style>
