@@ -1,10 +1,14 @@
 <script lang="ts">
-  import { toast } from '@zerodevx/svelte-toast';
+  import {
+    copyToast,
+    downloadTemplateToast,
+    downloadAttchmentToast,
+  } from '$lib/utils/toast';
   import { page } from '$app/stores';
   import { capitalizeAllLetters } from '$lib/utils/capitalize';
-
   import ArrowButton from '$lib/ArrowButton.svelte';
   import Timer from '$lib/ticket/Timer.svelte';
+  import GeneralInfo from '$lib/ticket/GeneralInfo.svelte';
 
   export let data: { title: string };
   const ticketId = $page.params.ticketId;
@@ -16,37 +20,6 @@
     const agentInfoText = agentInfo.innerText;
     navigator.clipboard.writeText(agentInfoText);
     copyToast();
-  }
-
-  function copyToast() {
-    toast.push('Agent Info Copied!', {
-      theme: {
-        '--toastBarHeight': 0,
-        '--toastColor': 'mintcream',
-        '--toastBackground': 'rgba(72,187,120,0.9)',
-        '--toastBarBackground': '#2F855A',
-      },
-    });
-  }
-  function downloadTemplateToast() {
-    toast.push('Downloaded Templates!', {
-      theme: {
-        '--toastBarHeight': 0,
-        '--toastColor': 'mintcream',
-        '--toastBackground': 'rgba(72,187,120,0.9)',
-        '--toastBarBackground': '#2F855A',
-      },
-    });
-  }
-  function downloadAttchmentToast() {
-    toast.push('Downloaded Attchments!', {
-      theme: {
-        '--toastBarHeight': 0,
-        '--toastColor': 'mintcream',
-        '--toastBackground': 'rgba(72,187,120,0.9)',
-        '--toastBarBackground': '#2F855A',
-      },
-    });
   }
 </script>
 
@@ -102,15 +75,15 @@
                 <div class="mb-2">TEMPLATES:</div>
                 <span class="underline text-sky-500"
                   ><i class="fa-solid fa-download" />
-                  <a href="#">MWC1-F</a></span
+                  <a href="/">MWC1-F</a></span
                 >
                 <span class="underline text-sky-500"
                   ><i class="fa-solid fa-download" />
-                  <a href="#">GEN_LEGU1-F</a></span
+                  <a href="/">GEN_LEGU1-F</a></span
                 >
                 <span class="underline text-sky-500"
                   ><i class="fa-solid fa-download" />
-                  <a href="#">MWC4-F</a></span
+                  <a href="/">MWC4-F</a></span
                 >
               </div>
               <button
@@ -134,11 +107,11 @@
                 </div>
                 <span class="underline text-sky-500"
                   ><i class="fa-solid fa-download" />
-                  <a href="#">profile-pic.png</a></span
+                  <a href="/">profile-pic.png</a></span
                 >
                 <span class="underline text-sky-500"
                   ><i class="fa-solid fa-download" />
-                  <a href="#">vanessa-ad.docx</a></span
+                  <a href="/">vanessa-ad.docx</a></span
                 >
               </div>
               <button
@@ -160,70 +133,9 @@
       </section>
       <section class="ticket-section">replies</section>
     </div>
+
     <div id="right-general-info-history" class="container basis-2/5">
-      <section id="top-agent-section" class="ticket-section">
-        <div id="general-info" class="text-center">
-          General Info:
-          <button
-            class="my-2 rounded-full bg-sky-400 px-3 py-1 font-bold text-white hover:bg-amber-500"
-            ><i class="fa-solid fa-check" /> Updated</button
-          >
-          <ul>
-            <li>
-              <span class="italic">Created Date:</span>
-              <strong>02/01/2023</strong>
-            </li>
-            <li>
-              <span class="italic">Last Updated: </span>
-              <strong>04/06/2023</strong>
-            </li>
-          </ul>
-          <hr class="border border-solid border-black mx-auto w-[60%] mt-3" />
-          <form action="POST">
-            <div class="select-wrapper">
-              <label for="assigned-to">Assigned to:</label>
-              <select id="assigned-to" name="assigned-to">
-                <option value="alex-w">Alex W.</option>
-                <option value="randy-p">Randy P.</option>
-                <option value="joel-c">Joel C.</option>
-                <option value="kirk-v">Kirk V.</option>
-              </select>
-            </div>
-            <div class="select-wrapper">
-              <label for="status">Status:</label>
-              <select id="status" name="status">
-                <option value="new">New</option>
-                <option value="submitted">Submitted</option>
-                <option value="waiting">Waiting</option>
-                <option value="hold">Hold</option>
-                <option value="replied">Replied</option>
-                <option value="resolved">Resolved</option>
-              </select>
-            </div>
-            <div class="select-wrapper">
-              <label for="priority">Priority:</label>
-              <select id="priority" name="priority">
-                <option value="low">Low</option>
-                <option value="medium">Medium</option>
-                <option value="high">High</option>
-                <option value="critical">Critical</option>
-              </select>
-            </div>
-            <div class="select-wrapper">
-              <label for="cateogry">Cateogry:</label>
-              <select id="cateogry" name="cateogry">
-                <option value="general">General Design</option>
-                <option value="email">Email</option>
-                <option value="agent">Agent Request</option>
-                <option value="website">Website</option>
-              </select>
-            </div>
-            <button type="submit" class="green-edit-button text-sm"
-              >Confirm Changes</button
-            >
-          </form>
-        </div>
-      </section>
+      <GeneralInfo />
       <div id="ticket-history">
         <strong class="underline text-sky-400">Ticket History</strong>
         <ul class="text-xs leading-5 italic font-roboto-condensed">
@@ -321,9 +233,5 @@
 
   .ticket-section {
     @apply container rounded-lg border border-black bg-stone-100 p-5;
-  }
-
-  .select-wrapper {
-    @apply border border-slate-300 bg-zinc-200;
   }
 </style>
