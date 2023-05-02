@@ -3,25 +3,27 @@
   import kirkAvatar from '$lib/assets/kirk.png';
   import randyAvatar from '$lib/assets/randy.png';
   import joelAvatar from '$lib/assets/joel.png';
+  import type { Employee, Status } from '$lib/types';
+  import { capitalizeFirstLetter } from '$lib/utils/capitalize';
 
-  let selected: any;
   let username: string;
-  let employee = [
+
+  const status: Status[] = [
+    { id: 1, status: 'new' },
+    { id: 2, status: 'submitted' },
+    { id: 3, status: 'waiting' },
+    { id: 4, status: 'hold' },
+    { id: 5, status: 'replied' },
+    { id: 6, status: 'resolved' },
+  ];
+
+  const employee: Employee[] = [
     { id: 1, person: 'Alex W.' },
     { id: 2, person: 'Randy P.' },
     { id: 3, person: 'Kirk V.' },
     { id: 4, person: 'Joel C.' },
   ];
-
-  const getImagePath = () => {
-    return username === 'kirk'
-      ? kirkAvatar
-      : username === 'randy'
-      ? randyAvatar
-      : username === 'joel'
-      ? joelAvatar
-      : alexAvatar;
-  };
+  let selected: Employee;
 </script>
 
 <section id="top-agent-section" class="ticket-section">
@@ -38,7 +40,7 @@
       </li>
       <li>
         <span class="italic">Last Updated: </span>
-        <strong>04/06/2023</strong>
+        <strong class="text-red-500">04/06/2023</strong>
       </li>
     </ul>
     <hr class="border border-solid border-black mx-auto w-[60%] mt-3" />
@@ -48,11 +50,24 @@
           >Assigned to: <img
             id="avatar"
             class="inline-block h-10"
-            src={alexAvatar}
+            src={username === 'Kirk V.'
+              ? kirkAvatar
+              : username === 'Randy P.'
+              ? randyAvatar
+              : username === 'Joel C.'
+              ? joelAvatar
+              : alexAvatar}
             alt="avatar"
           /></label
         >
-        <select id="assigned-to" name="assigned-to" value={selected}>
+        <select
+          id="assigned-to"
+          name="assigned-to"
+          bind:value={selected}
+          on:change={() => {
+            username = selected.person;
+          }}
+        >
           {#each employee as employee}
             <option value={employee}>{employee.person}</option>
           {/each}
@@ -60,13 +75,12 @@
       </div>
       <div class="select-wrapper">
         <label for="status">Status:</label>
-        <select id="status" name="status" on:change={() => {}}>
-          <option value="new">New</option>
-          <option value="submitted">Submitted</option>
-          <option value="waiting">Waiting</option>
-          <option value="hold">Hold</option>
-          <option value="replied">Replied</option>
-          <option value="resolved">Resolved</option>
+        <select id="status" name="status">
+          {#each status as ticketStatus}
+            <option value="status"
+              >{capitalizeFirstLetter(ticketStatus.status)}</option
+            >
+          {/each}
         </select>
       </div>
       <div class="select-wrapper">

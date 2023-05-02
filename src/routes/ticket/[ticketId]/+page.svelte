@@ -1,4 +1,5 @@
 <script lang="ts">
+  //modules & packages
   import {
     copyToast,
     downloadTemplateToast,
@@ -6,15 +7,18 @@
   } from '$lib/utils/toast';
   import { page } from '$app/stores';
   import { capitalizeAllLetters } from '$lib/utils/capitalize';
+
+  // components
   import ArrowButton from '$lib/ArrowButton.svelte';
   import Timer from '$lib/ticket/Timer.svelte';
   import GeneralInfo from '$lib/ticket/GeneralInfo.svelte';
 
+  //variables
   export let data: { title: string };
   const ticketId = $page.params.ticketId;
   const agentId = ticketId;
 
-  // --------functions---------
+  //
   function copyAgentInfo() {
     const agentInfo = document.getElementById('agent-info') as HTMLElement;
     const agentInfoText = agentInfo.innerText;

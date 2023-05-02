@@ -5,16 +5,6 @@
   import joelAvatar from '$lib/assets/joel.png';
 
   export let username: string;
-
-  const getImagePath = () => {
-    return username === 'kirk'
-      ? kirkAvatar
-      : username === 'randy'
-      ? randyAvatar
-      : username === 'joel'
-      ? joelAvatar
-      : alexAvatar;
-  };
 </script>
 
 <div
@@ -25,7 +15,13 @@
   <img
     id="avatar"
     class="inline-block h-10"
-    src={getImagePath()}
+    src={username === 'kirk'
+      ? kirkAvatar
+      : username === 'randy'
+      ? randyAvatar
+      : username === 'joel'
+      ? joelAvatar
+      : alexAvatar}
     alt="avatar"
   />
 
