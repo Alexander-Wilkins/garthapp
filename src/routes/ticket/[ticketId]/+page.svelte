@@ -28,7 +28,7 @@
 
 <section
   id="grey-bg"
-  class="container mx-auto bg-neutral-200 rounded-lg border border-black px-6"
+  class="container mx-auto bg-neutral-200 rounded-lg border border-black px-6 w-[1340px]"
 >
   <div id="ticket-title" class="container py-5">
     <div id="back-wrapper" class="inline-block mr-2">
