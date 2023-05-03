@@ -23,17 +23,14 @@
     .replace(/\//g, '-');
 </script>
 
-<div class="floating flex-wrapper">
-  <div id="select" class="ticket-cell with-border">
-    <input type="checkbox" class="select-checkbox" />
-  </div>
-  <a href="/ticket/{id}" class="flex-wrapper w-full">
-    <div id="ticket_id" class="ticket-cell with-border text-center w-[90px]">
+<div class="floating flex flex-col">
+  <a href="/ticket/{id}" class="flex-wrapper">
+    <div id="ticket_id" class="ticket-cell with-border text-center basis-24">
       <strong>{id}</strong>
     </div>
     <div
       id="ticket-title"
-      class="ticket-cell with-border flex flex-row items-center h-[2.6rem] flex-grow bg-lime-100 hover:bg-orange-100 font-roboto-condensed font-medium w-[40rem] justify-between"
+      class="ticket-cell relative with-border flex-row items-center h-[2.6rem] flex-grow bg-lime-100 hover:bg-orange-100 font-roboto-condensed font-medium justify-between truncate overflow-ellipsis w-[40rem]"
     >
       {title}
       <div
@@ -50,7 +47,7 @@
           ? `${statusColor} bg-stone-300`
           : status === 'resolved'
           ? `${statusColor} bg-lime-300`
-          : statusColor} rounded-full border border-solid border-black w-[115px] ml-10 text-center"
+          : statusColor} rounded-full border border-solid border-black w-[115px] ml-auto text-center absolute right-2 inline-block"
       >
         {#if status === 'resolved'}
           <i class="fa-solid fa-check" />
@@ -88,13 +85,6 @@
     --checkboxSize: 1.125rem;
   }
 
-  input.select-checkbox {
-    position: relative;
-    top: 3px;
-    width: var(--checkboxSize);
-    height: var(--checkboxSize);
-  }
-
   .ticket-cell {
     @apply p-2 px-5;
   }
@@ -104,7 +94,7 @@
   }
 
   .flex-wrapper {
-    @apply flex flex-row place-content-center;
+    @apply flex flex-row justify-center;
   }
 
   .floating {
@@ -120,5 +110,35 @@
     position: relative;
     bottom: 0px;
     @apply ring-4;
+  }
+
+  @media (max-width: 1581px) {
+    #created_at {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    #category {
+      display: none;
+    }
+  }
+  @media (max-width: 1044px) {
+    #priority {
+      display: none;
+    }
+  }
+  @media (max-width: 900px) {
+    #ticket_id {
+      @apply min-w-[96px] px-2;
+    }
+  }
+  @media (max-width: 725px) {
+    #status {
+      @apply w-[60px] text-xs;
+    }
+    #ticket-title {
+      @apply pr-20;
+    }
   }
 </style>

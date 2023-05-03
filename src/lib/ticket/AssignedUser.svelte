@@ -9,9 +9,9 @@
 
 <div
   id="assigned_to"
-  class="with-border | flex flex-row place-items-center gap-1 w-[13.25rem] whitespace-nowrap px-5"
+  class="with-border | flex flex-row place-items-center gap-1 basis-[12rem] whitespace-nowrap px-5"
 >
-  <span class="text-xs italic">Assigned to:</span>
+  <span class="text-xs italic">Assigned:</span>
   <img
     id="avatar"
     class="inline-block h-10"
@@ -35,3 +35,11 @@
     <span id="user" class="font-semibold text-sm">Alex W.</span>
   {/if}
 </div>
+
+<style lang="postcss">
+  @media (max-width: 1400px) {
+    #assigned_to {
+      display: none;
+    }
+  }
+</style>

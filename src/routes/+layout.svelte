@@ -5,7 +5,7 @@
 </script>
 
 <SvelteToast options={{ reversed: true, intro: { y: 192 } }} />
-<div class="mx-20">
+<div id="body-container" class="mx-20">
   <Navbar />
   <slot />
 </div>
@@ -19,5 +19,11 @@
     --toastContainerRight: auto;
     --toastContainerBottom: 8rem;
     --toastContainerLeft: calc(50vw - 8rem);
+  }
+
+  @media (max-width: 725px) {
+    #body-container {
+      @apply mx-6;
+    }
   }
 </style>

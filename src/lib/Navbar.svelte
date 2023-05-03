@@ -8,7 +8,7 @@
     ><img
       src={logo}
       alt="garthok 2.0 logo"
-      class="h-[90px] transition-all hover:-rotate-2"
+      class="transition-all hover:-rotate-2"
     /></a
   >
   <div id="searchbar" class="relative w-1/3">
@@ -37,3 +37,23 @@
     >
   </div>
 </nav>
+
+<style lang="postcss">
+  img {
+    max-width: 267px;
+    height: auto;
+  }
+
+  @media (max-width: 725px) {
+    #searchbar {
+      display: none;
+    }
+  }
+
+  @media (max-width: 600px) {
+    img {
+      max-width: 200px;
+      height: auto;
+    }
+  }
+</style>

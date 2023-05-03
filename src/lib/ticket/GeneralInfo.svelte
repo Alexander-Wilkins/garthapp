@@ -1,11 +1,13 @@
 <script lang="ts">
+  import type { Employee, Status } from '$lib/types';
+  
+  import { capitalizeFirstLetter } from '$lib/utils/capitalize';
+
   import alexAvatar from '$lib/assets/alex.png';
   import kirkAvatar from '$lib/assets/kirk.png';
   import randyAvatar from '$lib/assets/randy.png';
   import joelAvatar from '$lib/assets/joel.png';
-  import type { Employee, Status } from '$lib/types';
-  import { capitalizeFirstLetter } from '$lib/utils/capitalize';
-
+  
   let username: string;
 
   const status: Status[] = [
