@@ -30,7 +30,7 @@
     </div>
     <div
       id="ticket-title"
-      class="ticket-cell relative with-border flex-row items-center h-[2.6rem] flex-grow bg-lime-100 hover:bg-orange-100 font-roboto-condensed font-medium justify-between truncate overflow-ellipsis w-[40rem]"
+      class="ticket-cell relative with-border flex-row items-center h-[2.625rem] flex-grow bg-lime-100 hover:bg-orange-100 font-roboto-condensed font-medium justify-between truncate overflow-ellipsis w-[40rem]"
     >
       {title}
       <div
