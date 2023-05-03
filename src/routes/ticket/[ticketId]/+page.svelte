@@ -16,7 +16,6 @@
   //variables
   export let data: { title: string };
   const ticketId = $page.params.ticketId;
-  const agentId = ticketId;
 
   //
   function copyAgentInfo() {
@@ -32,19 +31,19 @@
   class="container mx-auto bg-neutral-200 rounded-lg border border-black px-6"
 >
   <div id="ticket-title" class="container py-5">
-    <div id="back-wrapper" class="absolute left-[9rem]">
+    <div id="back-wrapper" class="inline-block mr-2">
       <ArrowButton href="/" />
     </div>
-    <span class="font-roboto-condensed text-2xl font-extrabold">
+    <span class="font-roboto-condensed text-4xl font-extrabold">
       #{ticketId}
     </span>
-    <span class="text-2xl ml-0.5">{capitalizeAllLetters(data.title)}</span>
+    <span class="text-3xl ml-1.5">{capitalizeAllLetters(data.title)}</span>
   </div>
   <div id="inner-container" class="flex flex-row gap-3 flex-grow">
     <div id="left-info-request-replies" class="container">
       <section id="top-agent-section" class="ticket-section">
         <div id="agent-container" class="container flex flex-col">
-          <a href="/editagent/{agentId}" class="cursor-pointer">
+          <a href="/editagent/{ticketId}" class="cursor-pointer">
             <button class="green-edit-button text-sm"
               ><i class="fa-solid fa-pen" /> EDIT AGENT INFO</button
             >
@@ -126,22 +125,16 @@
               >
             </div>
           </div>
-          <div
-            id="agent-content"
-            class="flex flex-row gap-3 mt-3 bg-white items-center italic text-sm border border-slate-200 px-2 py-1 w-full justify-center"
-          >
-            Time Worked:
-            <Timer />
-          </div>
         </div>
       </section>
       <section class="ticket-section">replies</section>
     </div>
 
-    <div id="right-general-info-history" class="container basis-2/5">
+    <div id="right-general-info-history" class="">
       <GeneralInfo />
       <div id="ticket-history">
-        <strong class="underline text-sky-400">Ticket History</strong>
+        <strong class="underline text-sky-400 block mb-2">Ticket History</strong
+        >
         <ul class="text-xs leading-5 italic font-roboto-condensed">
           <li>01-03-2023 11:10:01 | ticket created by Kirk V.</li>
           <li>

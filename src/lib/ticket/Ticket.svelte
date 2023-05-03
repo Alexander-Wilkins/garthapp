@@ -30,7 +30,7 @@
     </div>
     <div
       id="ticket-title"
-      class="ticket-cell relative with-border flex-row items-center h-[2.625rem] flex-grow bg-lime-100 hover:bg-orange-100 font-roboto-condensed font-medium justify-between truncate overflow-ellipsis w-[40rem]"
+      class="ticket-cell relative with-border flex-row items-center flex-grow bg-lime-100 hover:bg-orange-100 font-roboto-condensed font-medium justify-between truncate overflow-ellipsis w-[40rem]"
     >
       {title}
       <div
@@ -66,14 +66,14 @@
     </div>
     <div
       id="created_at"
-      class="ticket-cell with-border font-roboto-condensed font-medium italic text-sm h-[2.6rem] justify-center items-center flex flex-row"
+      class="ticket-cell with-border font-roboto-condensed font-medium italic text-sm justify-center items-center flex flex-row"
     >
       <span class="text-xs">DATE CREATED: &nbsp;</span>
       {formattedDate}
     </div>
     <div
       id="priority"
-      class="ticket-cell with-border bg-slate-200 w-[149px] max-h-[42px] text-center"
+      class="ticket-cell with-border bg-slate-200 basis-[149px] text-center"
     >
       <Priority {priority} />
     </div>
@@ -135,7 +135,7 @@
   }
   @media (max-width: 725px) {
     #status {
-      @apply w-[60px] text-xs;
+      @apply w-[70px] text-xs;
     }
     #ticket-title {
       @apply pr-20;
