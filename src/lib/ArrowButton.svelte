@@ -4,7 +4,7 @@
 
 <a {href}
   ><button id="back-arrow" class="pill-button">
-    <i class="fa-solid fa-arrow-left | text-3xl" />
+    <i class="fa-solid fa-arrow-left text-3xl" />
   </button></a
 >
 

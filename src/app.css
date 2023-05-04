@@ -38,12 +38,15 @@
 .blue-sm-button {
   @apply btn__pop-up btn__cartoon-shadow my-2 rounded-full border border-solid border-black bg-sky-400 px-5 py-1 font-medium text-white hover:bg-sky-600;
 }
+.rocket-button {
+  @apply btn__pop-up btn__cartoon-shadow rounded-full border border-solid border-black bg-white p-3 px-5 font-bold text-black hover:bg-sky-300;
+}
 
 .back-to-top {
   position: fixed;
   bottom: 2rem;
   right: -6rem;
-  z-index: 999;
+  z-index: 5;
   opacity: 0;
   transition: opacity 0.3s ease, right 0.3s ease;
 }

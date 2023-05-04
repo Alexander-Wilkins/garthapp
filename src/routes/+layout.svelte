@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { SvelteToast } from '@zerodevx/svelte-toast';
   import { onMount } from 'svelte';
   import Navbar from '$lib/Navbar.svelte';
@@ -6,7 +6,7 @@
   import { fly } from 'svelte/transition';
 
   export let data;
-  let showBackToTop = false;
+  let showBackToTop: boolean = false;
 
   function scrollTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -14,13 +14,16 @@
 
   onMount(() => {
     const backToTop = document.querySelector('.back-to-top');
+
     window.addEventListener('scroll', () => {
-      if (window.scrollY > window.innerHeight / 2) {
+      if (backToTop && window.scrollY > window.innerHeight / 2) {
         showBackToTop = true;
         backToTop.classList.add('show');
       } else {
         showBackToTop = false;
-        backToTop.classList.remove('show');
+        if (backToTop) {
+          backToTop.classList.remove('show');
+        }
       }
     });
   });
@@ -38,7 +41,9 @@
     </div>
   {/key}
 </div>
-<button on:click={scrollTop} class="back-to-top"> Back to Top </button>
+<button on:click={scrollTop} class="back-to-top rocket-button text-4xl"
+  ><i class="fa-brands fa-space-awesome" /></button
+>
 
 <footer class="w-full text-center px-auto py-7 text-xs">
   © 2023 Berwick Insurance Group – An Integrity Company | All rights reserved. |
