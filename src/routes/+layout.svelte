@@ -45,7 +45,7 @@
   ><i class="fa-brands fa-space-awesome" /></button
 >
 
-<footer class="w-full text-center px-auto py-7 text-xs">
+<footer id="bottom-of-page" class="w-full text-center px-auto py-7 text-xs">
   © 2023 Berwick Insurance Group – An Integrity Company | All rights reserved. |
   888-745-2320 Garthok 2 was created by Alex Wilkins and Kirk Vangilder from
   Berwick Insurance Group Marketing - All rights reserved. Nethal the Garthok.

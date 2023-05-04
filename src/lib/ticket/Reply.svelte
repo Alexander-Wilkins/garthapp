@@ -21,7 +21,7 @@
         ></a
       >
     </span>
-    <a href="/" class="text-teal-600 hover:text-sky-700 underline"
+    <a href="#bottom-of-page" class="text-teal-600 hover:text-sky-700 underline"
       >Go to Latest Reply <i class="fa-solid fa-arrow-down" /></a
     >
   </div>
