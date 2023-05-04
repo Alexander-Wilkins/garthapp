@@ -1,7 +1,7 @@
 <script>
-  import db from '$lib/assets/db.json';
+  import replydb from '$lib/assets/replydb.json';
 
-  const date = new Date(db.date_created.time);
+  const date = new Date(replydb.date_created.time);
   const formattedDate = `${date.toLocaleDateString()}, ${date.toLocaleTimeString(
     'en-US',
     { hour: 'numeric', minute: 'numeric' }
@@ -10,10 +10,10 @@
 
 <section class="ticket-section">
   <div
-    class="bg-red-200 rounded-2xl p-4 flex flex-row justify-between items-center mb-4"
+    class="bg-sky-200 rounded-2xl p-4 flex flex-row justify-between items-center mb-4"
   >
     <span>
-      <strong class="text-lg mr-4">Initial Request:</strong>
+      <strong class="text-lg mr-4">Reply:</strong>
       <a href="/"
         ><button
           class="rounded-full border border-gray-600 text-teal-600 py-[0.125rem] px-3 hover:bg-slate-100"
@@ -25,17 +25,21 @@
       >Go to Latest Reply <i class="fa-solid fa-arrow-down" /></a
     >
   </div>
-  <div id="body-copy" class="text-sm mb-12 mt-5">{db.body}</div>
+  <div id="body-copy" class="text-sm mb-12 mt-5">{replydb.body}</div>
   <section id="post-data">
     <hr class="w-[300px] my-2 mt-5" />
     <ul class="font-roboto-condensed">
       <li>
-        Posted By: <strong>{db.date_created.posted_by}</strong>
+        Posted By: <strong>{replydb.date_created.posted_by}</strong>
       </li>
       <li class="italic font-light">Date: {formattedDate}</li>
       <li class="italic font-medium">
         Attachments <i class="fa-solid fa-paperclip" />:
-        <span class="font-light ml-2">none</span>
+        <span class="font-light ml-2"
+          ><a href="/" class="underline text-sky-400 font-medium"
+            >Vanessa-ad.docx</a
+          ></span
+        >
       </li>
     </ul>
     <div id="reply-button" class="flex justify-end">

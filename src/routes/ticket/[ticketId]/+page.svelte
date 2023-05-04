@@ -12,6 +12,7 @@
   import ArrowButton from '$lib/ArrowButton.svelte';
   import GeneralInfo from '$lib/ticket/GeneralInfo.svelte';
   import Request from '$lib/ticket/Request.svelte';
+  import Reply from '$lib/ticket/Reply.svelte';
 
   //variables
   export let data: { title: string };
@@ -40,7 +41,10 @@
     <span class="text-3xl ml-1.5">{capitalizeAllLetters(data.title)}</span>
   </div>
   <div id="inner-container" class="flex flex-row gap-3 flex-grow">
-    <div id="left-info-request-replies" class="container flex flex-col gap-3">
+    <div
+      id="left-info-request-replies"
+      class="container flex flex-col gap-3 mb-10"
+    >
       <section id="top-agent-section" class="ticket-section">
         <div id="agent-container" class="container flex flex-col">
           <a href="/editagent/{ticketId}" class="cursor-pointer">
@@ -128,6 +132,8 @@
         </div>
       </section>
       <Request />
+      <Reply />
+      <Reply />
     </div>
 
     <div id="right-general-info-history" class="">

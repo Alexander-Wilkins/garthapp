@@ -38,3 +38,17 @@
 .blue-sm-button {
   @apply btn__pop-up btn__cartoon-shadow my-2 rounded-full border border-solid border-black bg-sky-400 px-5 py-1 font-medium text-white hover:bg-sky-600;
 }
+
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: -6rem;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease, right 0.3s ease;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  right: 2rem;
+}

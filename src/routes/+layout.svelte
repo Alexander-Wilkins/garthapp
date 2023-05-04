@@ -1,10 +1,29 @@
 <script>
   import { SvelteToast } from '@zerodevx/svelte-toast';
+  import { onMount } from 'svelte';
   import Navbar from '$lib/Navbar.svelte';
   import '../app.css';
   import { fly } from 'svelte/transition';
 
   export let data;
+  let showBackToTop = false;
+
+  function scrollTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  onMount(() => {
+    const backToTop = document.querySelector('.back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > window.innerHeight / 2) {
+        showBackToTop = true;
+        backToTop.classList.add('show');
+      } else {
+        showBackToTop = false;
+        backToTop.classList.remove('show');
+      }
+    });
+  });
 </script>
 
 <SvelteToast options={{ reversed: true, intro: { y: 192 } }} />
@@ -19,6 +38,13 @@
     </div>
   {/key}
 </div>
+<button on:click={scrollTop} class="back-to-top"> Back to Top </button>
+
+<footer class="w-full text-center px-auto py-7 text-xs">
+  © 2023 Berwick Insurance Group – An Integrity Company | All rights reserved. |
+  888-745-2320 Garthok 2 was created by Alex Wilkins and Kirk Vangilder from
+  Berwick Insurance Group Marketing - All rights reserved. Nethal the Garthok.
+</footer>
 
 <style lang="postcss">
   :global(.font-roboto-condensed) {
