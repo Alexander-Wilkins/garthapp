@@ -1,5 +1,11 @@
 <script>
   import db from '$lib/assets/db.json';
+
+  const date = new Date(db.date_created.time);
+  const formattedDate = `${date.toLocaleDateString()}, ${date.toLocaleTimeString(
+    'en-US',
+    { hour: 'numeric', minute: 'numeric' }
+  )}`;
 </script>
 
 <section class="ticket-section">
@@ -20,10 +26,32 @@
     >
   </div>
   <div id="body-copy" class="text-sm">{db.body}</div>
+  <section id="post-data">
+    <hr class="w-[300px] my-2 mt-5" />
+    <ul class="font-roboto-condensed">
+      <li>
+        Posted By: <strong>{db.date_created.posted_by}</strong>
+      </li>
+      <li class="italic font-light">Date: {formattedDate}</li>
+      <li class="italic font-medium">
+        Attachments <i class="fa-solid fa-paperclip" />:
+        <span class="font-light ml-2">none</span>
+      </li>
+    </ul>
+    <div id="reply-button" class="flex justify-end">
+      <button class="blue-sm-button"
+        >Submit Reply <i class="fa-solid fa-reply" /></button
+      >
+    </div>
+  </section>
 </section>
 
 <style lang="postcss">
   .ticket-section {
-    @apply container rounded-lg border border-black bg-white px-7 py-5;
+    @apply container rounded-lg border border-black bg-white px-7 py-5 shadow-lg transition-all hover:-mt-0.5;
+  }
+  hr {
+    border-width: 1px;
+    border-color: black;
   }
 </style>
