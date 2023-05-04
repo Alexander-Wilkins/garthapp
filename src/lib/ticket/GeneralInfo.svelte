@@ -59,7 +59,7 @@
     <form action="POST">
       <div class="select-wrapper">
         <label for="assigned-to"
-          ><strong class="font-roboto-condensed italic">Assigned to:</strong>
+          ><strong class="font-roboto-condensed italic">Assigned:</strong>
         </label>
         <img
           id="avatar"
@@ -139,10 +139,10 @@
   }
 
   .select-wrapper {
-    @apply mb-1 flex flex-row items-center justify-between border border-slate-300 bg-zinc-100 p-1;
+    @apply mb-1 flex flex-row items-center justify-between border border-slate-300 bg-zinc-100 p-2;
   }
 
   .select-style {
-    @apply rounded px-4 py-1;
+    @apply rounded px-2 py-1;
   }
 </style>

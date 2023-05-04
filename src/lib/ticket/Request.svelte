@@ -1,0 +1,29 @@
+<script>
+  import db from '$lib/assets/db.json';
+</script>
+
+<section class="ticket-section">
+  <div
+    class="bg-red-200 rounded-2xl p-4 flex flex-row justify-between items-center mb-4"
+  >
+    <span>
+      <strong class="text-lg mr-4">Initial Request:</strong>
+      <a href="/"
+        ><button
+          class="rounded-full border border-gray-600 text-teal-600 py-[0.125rem] px-3 hover:bg-slate-100"
+          ><i class="fa-solid fa-pen-to-square" /> Edit Post</button
+        ></a
+      >
+    </span>
+    <a href="/" class="text-teal-600 hover:text-sky-700 underline"
+      >Go to Latest Reply <i class="fa-solid fa-arrow-down" /></a
+    >
+  </div>
+  <div id="body-copy" class="text-sm">{db.body}</div>
+</section>
+
+<style lang="postcss">
+  .ticket-section {
+    @apply container rounded-lg border border-black bg-white px-7 py-5;
+  }
+</style>
