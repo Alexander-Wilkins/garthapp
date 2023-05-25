@@ -1,11 +1,11 @@
-import { supabase } from '$lib/supabaseClient';
+import { supabase } from "$lib/supabaseClient";
 
 export const load = async ({ params }) => {
   const { ticketId } = params;
   const { data: ticket, error } = await supabase
-    .from('tickets')
-    .select('title')
-    .eq('id', ticketId)
+    .from("tickets")
+    .select("title")
+    .eq("id", ticketId)
     .single();
 
   if (error) {

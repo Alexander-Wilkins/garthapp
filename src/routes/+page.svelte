@@ -1,8 +1,7 @@
 <script lang="ts">
-  import type { PageData } from './$types';
-
-  import Ticket from '$lib/ticket/Ticket.svelte';
-  import PillButton from '$lib/PillButton.svelte';
+  import type { PageData } from "./$types";
+  import Ticket from "$lib/ticket/Ticket.svelte";
+  import PillButton from "$lib/PillButton.svelte";
 
   export let data: PageData;
   let { tickets } = data;
@@ -14,28 +13,32 @@
 </div>
 <div
   id="open-ticket-container"
-  class="flex flex-row items-center justify-between mx-[4%] my-5"
+  class="mx-[4%] my-5 flex flex-row items-center justify-between"
 >
-  <div id="open-tickets" class="font-roboto-condensed font-bold text-3xl">
+  <div id="open-tickets" class="font-roboto-condensed text-3xl font-bold">
     OPEN TICKETS
   </div>
   <div
     id="number-of-tickets"
-    class="font-roboto-condensed font-thin text-slate-500 text-xl"
+    class="font-roboto-condensed text-xl font-thin text-slate-500"
   >
     Number of Tickets: <strong>{tickets.length}</strong>
   </div>
 </div>
-<section id="tickets" class="shadow-md bg-slate-50 mx-auto max-w-[1570px]">
+<section id="tickets" class="mx-auto max-w-[1570px] bg-slate-50 shadow-md">
   {#each tickets as ticket}
     <Ticket {...ticket} />
   {/each}
 </section>
 
+<section>
+  <div>dog</div>
+</section>
+
 <style lang="postcss">
   @media (max-width: 582px) {
     #open-ticket-container {
-      @apply flex-col place-content-center;
+      @apply flex-col place-content-center text-slate-600;
     }
   }
 </style>

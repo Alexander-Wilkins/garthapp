@@ -1,28 +1,28 @@
 <script lang="ts">
-  import { SvelteToast } from '@zerodevx/svelte-toast';
-  import { onMount } from 'svelte';
-  import Navbar from '$lib/Navbar.svelte';
-  import '../app.css';
-  import { fly } from 'svelte/transition';
+  import Navbar from "$lib/Navbar.svelte";
+  import { SvelteToast } from "@zerodevx/svelte-toast";
+  import { onMount } from "svelte";
+  import { fly } from "svelte/transition";
+  import "../app.css";
 
   export let data;
-  let showBackToTop: boolean = false;
+  let showBackToTop: boolean;
 
   function scrollTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   onMount(() => {
-    const backToTop = document.querySelector('.back-to-top');
+    const backToTop = document.querySelector(".back-to-top");
 
-    window.addEventListener('scroll', () => {
+    window.addEventListener("scroll", () => {
       if (backToTop && window.scrollY > window.innerHeight / 2) {
         showBackToTop = true;
-        backToTop.classList.add('show');
+        backToTop.classList.add("show");
       } else {
         showBackToTop = false;
         if (backToTop) {
-          backToTop.classList.remove('show');
+          backToTop.classList.remove("show");
         }
       }
     });
@@ -45,7 +45,7 @@
   ><i class="fa-brands fa-space-awesome" /></button
 >
 
-<footer id="bottom-of-page" class="w-full text-center px-auto py-7 text-xs">
+<footer id="bottom-of-page" class="px-auto w-full py-7 text-center text-xs">
   © 2023 Berwick Insurance Group – An Integrity Company | All rights reserved. |
   888-745-2320 Garthok 2 was created by Alex Wilkins and Kirk Vangilder from
   Berwick Insurance Group Marketing - All rights reserved. Nethal the Garthok.
@@ -53,7 +53,7 @@
 
 <style lang="postcss">
   :global(.font-roboto-condensed) {
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
   }
   :root {
     --toastContainerTop: auto;
